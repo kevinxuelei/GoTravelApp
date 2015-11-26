@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers
+END
+AVFileQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVFileQuery.h
+END
+AVQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVQuery.h
+END
+AVHistoryMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVHistoryMessage.h
+END
+AVCloud.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVCloud.h
+END
+AVObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVObject.h
+END
+AVOSCloud.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVOSCloud.h
+END
+AVAnonymousUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVAnonymousUtils.h
+END
+AVConstants.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVConstants.h
+END
+AVRelation.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVRelation.h
+END
+AVSubclassing.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVSubclassing.h
+END
+AVUser.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVUser.h
+END
+AVLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVLogger.h
+END
+AVFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVFile.h
+END
+AVPush.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVPush.h
+END
+AVObject+Subclass.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVObject+Subclass.h
+END
+AVSession.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVSession.h
+END
+AVStatus.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVStatus.h
+END
+AVMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVMessage.h
+END
+AVGeoPoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVGeoPoint.h
+END
+AVSearchSortBuilder.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVSearchSortBuilder.h
+END
+AVAnalytics.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVAnalytics.h
+END
+AVCloudQueryResult.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVCloudQueryResult.h
+END
+AVSearchQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVSearchQuery.h
+END
+AVHistoryMessageQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVHistoryMessageQuery.h
+END
+AVGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVGroup.h
+END
+AVACL.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVACL.h
+END
+AVInstallation.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVInstallation.h
+END
+AVRole.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVRole.h
+END
+AVSignature.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/Headers/AVSignature.h
+END

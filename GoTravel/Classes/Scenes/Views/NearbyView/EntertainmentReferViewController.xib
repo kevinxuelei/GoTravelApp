@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntertainmentReferViewController">
+            <connections>
+                <outlet property="cityText" destination="Yek-dy-h3j" id="gb8-uY-JpN"/>
+                <outlet property="keyText" destination="zKO-1U-YUQ" id="5NR-FJ-Zt1"/>
+                <outlet property="nextPageButton" destination="kbO-iS-zO2" id="jHB-Bc-dpj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="风景名胜,欢乐谷……" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-1U-YUQ">
+                    <rect key="frame" x="96" y="20" width="120" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dha-9q-zcI"/>
+                        <constraint firstAttribute="width" constant="120" id="k9A-pq-ikA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFiledReturnEditing:" destination="-1" eventType="editingDidEnd" id="qLd-vE-ldE"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-dy-h3j">
+                    <rect key="frame" x="8" y="21" width="60" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="J0C-Xy-3s0"/>
+                        <constraint firstAttribute="width" constant="60" id="mhP-zF-zcY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFiledReturnEditing:" destination="-1" eventType="editingDidEnd" id="O7g-xC-KEK"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-chaxun.png" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-wp-EGX">
+                    <rect key="frame" x="76" y="25" width="20" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="U3Y-cD-Bdk"/>
+                        <constraint firstAttribute="width" constant="20" id="dLZ-rx-bso"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-Ow-mQK">
+                    <rect key="frame" x="230" y="20" width="60" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.72978973540000003" blue="0.51461688279999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="9Qp-60-nPE"/>
+                        <constraint firstAttribute="width" constant="60" id="Ixy-2e-cBS"/>
+                    </constraints>
+                    <state key="normal" title="娱乐搜索"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickOk:" destination="-1" eventType="touchUpInside" id="IdI-92-Bah"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbO-iS-zO2">
+                    <rect key="frame" x="144" y="60" width="127" height="36"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.72978973540000003" blue="0.51461688279999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="cnV-OH-jdS"/>
+                        <constraint firstAttribute="height" constant="36" id="eiF-5y-Jy5"/>
+                    </constraints>
+                    <state key="normal" title="更多好玩点这里喽"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickNextPage:" destination="-1" eventType="touchUpInside" id="HDI-5S-9cs"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PMK-Ow-mQK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="7hS-xb-06V"/>
+                <constraint firstItem="kbO-iS-zO2" firstAttribute="top" secondItem="PMK-Ow-mQK" secondAttribute="bottom" constant="10" id="Akm-7d-OeN"/>
+                <constraint firstItem="UYJ-wp-EGX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="OIt-Qg-l4c"/>
+                <constraint firstItem="zKO-1U-YUQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Spy-RV-7dh"/>
+                <constraint firstItem="Yek-dy-h3j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="WdU-xF-6y8"/>
+                <constraint firstItem="zKO-1U-YUQ" firstAttribute="leading" secondItem="UYJ-wp-EGX" secondAttribute="trailing" id="dA7-Td-R7d"/>
+                <constraint firstItem="UYJ-wp-EGX" firstAttribute="leading" secondItem="Yek-dy-h3j" secondAttribute="trailing" constant="8" id="h91-P1-lY5"/>
+                <constraint firstItem="kbO-iS-zO2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="144" id="oBJ-5g-X5x"/>
+                <constraint firstItem="PMK-Ow-mQK" firstAttribute="leading" secondItem="zKO-1U-YUQ" secondAttribute="trailing" constant="14" id="u7O-G1-MYz"/>
+                <constraint firstItem="Yek-dy-h3j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="yhj-oE-9JG"/>
+            </constraints>
+            <point key="canvasLocation" x="595" y="377"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconfont-chaxun.png" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,145 @@
+//
+//  TravelNotesCell.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/12.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "TravelNotesCell.h"
+#import "UIImageView+WebCache.h"
+
+@interface TravelNotesCell  ()
+
+@property (nonatomic, strong) UIImageView *myImage;//图片
+
+@property (nonatomic, strong) UILabel *contentLabel;//内容
+
+
+
+@property (nonatomic, strong) UILabel *startTimeLabel;//开始时间
+
+@property (nonatomic, strong) UILabel *dayCountLabel;//时间总数-带天
+
+@property (nonatomic, strong) UILabel *browseCountLabel;//浏览次数-带次浏览
+
+@property (nonatomic, strong) UILabel *cityNameLabel;//城市名字
+
+@property (nonatomic, strong) UIImageView *headImage;//头像
+
+@property (nonatomic, strong) UILabel *nameLabel;//名字
+
+
+
+@end
+
+@implementation TravelNotesCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self) {
+        
+        self.myImage = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.myImage];
+        
+        self.contentLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.contentLabel];
+        
+        
+        
+        self.startTimeLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.startTimeLabel];
+        
+        self.dayCountLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.dayCountLabel];
+        
+        self.browseCountLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.browseCountLabel];
+        
+        self.cityNameLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.cityNameLabel];
+        
+        self.headImage = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.headImage];
+        
+        self.nameLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.nameLabel];
+        
+    }
+    
+    return self;
+}
+
+- (void)layoutSubviews
+{
+    
+    [super layoutSubviews];
+    
+    
+    self.myImage.frame = CGRectMake(10, 10, 130, 190);
+    
+    
+    self.contentLabel.frame = CGRectMake(CGRectGetMaxX(self.myImage.frame) + 10, CGRectGetMinY(self.myImage.frame), self.frame.size.width - 160, 30);
+    self.contentLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    self.startTimeLabel.frame = CGRectMake(CGRectGetMinX(self.contentLabel.frame), CGRectGetMaxY(self.contentLabel.frame) + 10, CGRectGetWidth(self.contentLabel.frame)*0.5, 30);
+    self.startTimeLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    self.dayCountLabel.frame = CGRectMake(CGRectGetMaxX(self.startTimeLabel.frame), CGRectGetMinY(self.startTimeLabel.frame), CGRectGetWidth(self.contentLabel.frame)*0.5, CGRectGetHeight(self.startTimeLabel.frame));
+    self.dayCountLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    self.browseCountLabel.frame = CGRectMake(CGRectGetMinX(self.startTimeLabel.frame), CGRectGetMaxY(self.startTimeLabel.frame) + 10, CGRectGetWidth(self.contentLabel.frame), 30);
+    self.browseCountLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    self.cityNameLabel.frame = CGRectMake(CGRectGetMinX(self.browseCountLabel.frame), CGRectGetMaxY(self.browseCountLabel.frame) + 10, CGRectGetWidth(self.browseCountLabel.frame), 30);
+    self.cityNameLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    
+    self.headImage.frame = CGRectMake(CGRectGetMinX(self.cityNameLabel.frame), CGRectGetMaxY(self.cityNameLabel.frame) + 10, 30, 30);
+    
+    
+    
+    self.nameLabel.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame) + 10, CGRectGetMinY(self.headImage.frame), CGRectGetWidth(self.cityNameLabel.frame) - 40, 30);
+    self.nameLabel.font = [UIFont systemFontOfSize:14];
+    
+    
+    
+    
+    
+}
+
+- (void)binModel1:(TravelNotesModel *)model
+{
+    
+    [self.myImage sd_setImageWithURL:[NSURL URLWithString:model.cover_image_w640] placeholderImage:[UIImage imageNamed:@"placeHolderimage"]];
+  
+    self.contentLabel.text = model.index_title;
+    
+    
+    self.startTimeLabel.text = model.first_day;
+    
+    self.dayCountLabel.text = [NSString stringWithFormat:@"总天数:%@", model.day_count];
+    self.browseCountLabel.text = [NSString stringWithFormat:@"浏览次数:%@",model.view_count];
+    
+    self.cityNameLabel.text = model.popular_place_str;
+    
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:model.avatar_m]];
+    self.headImage.layer.masksToBounds = YES;
+    self.headImage.layer.cornerRadius = 15;
+    
+    self.nameLabel.text = model.name;
+    
+    
+    
+    
+}
+
+@end

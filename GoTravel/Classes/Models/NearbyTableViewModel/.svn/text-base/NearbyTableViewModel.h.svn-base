@@ -1,0 +1,52 @@
+//
+//  NearbyTableViewModel.h
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/13.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NearbyTableViewModel : NSObject
+
+//详情描述
+//"description
+//图片
+ //"cover_s":"http://photos.breadtrip.com/photo_2015_02_19_0aa742b07f7adf96f2eb0c7a2027484c.jpg?imageView/1/w/280/h/280/q/75",
+//距离
+//"distance": 0.4201673095588781,
+//名字
+//"name": "便宜坊(五彩城店)",
+//想去人数
+//"wish_to_go_count": 0,
+//点评
+//"comments_count": 0,
+//推荐
+//"recommended": true, 
+
+//店名
+@property(nonatomic,copy)NSString *name;
+//图片 **
+@property(nonatomic,copy)NSString *cover_s;
+//点评
+@property(nonatomic,copy)NSString *comments_count;
+//详情
+@property(nonatomic,copy)NSString *mydescription;
+//距离
+@property(nonatomic,copy)NSString *distance;
+//去过的人数
+@property(nonatomic,copy)NSString *visited_count;
+//推荐理由
+@property(nonatomic,copy)NSString *recommended_reason;
+//点评数
+@property(nonatomic,copy)NSString *tips_count;
+//推荐
+@property(nonatomic,copy)NSString *recommended;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict;
+
+
+
+
+@end

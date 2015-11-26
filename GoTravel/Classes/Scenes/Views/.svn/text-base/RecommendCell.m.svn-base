@@ -1,0 +1,219 @@
+//
+//  RecommendCell.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/12.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "RecommendCell.h"
+#import "UIImageView+WebCache.h"
+#import "RecommendModel.h"
+#import "MyWebController.h"
+@interface RecommendCell ()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+@property (nonatomic, strong) UIImageView *myImage;//图片
+
+@property (nonatomic, strong) UIPageControl *myPage;
+
+/**用来接收传过来的model值*/
+@property (nonatomic ,strong) RecommendModel *imageModel;
+
+@property (nonatomic, strong) NSTimer *time;//计时器
+
+
+@end
+
+@implementation RecommendCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+
+   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self) {
+        
+        self.imageArray = [NSMutableArray array];
+       
+        self.scrollView = [[UIScrollView alloc] init];
+        [self.contentView addSubview:self.scrollView];
+        
+        self.myPage = [[UIPageControl alloc] init];
+        [self.contentView addSubview:self.myPage];
+        
+      
+        
+        [self startTimer];
+    }
+    
+    
+    return self;
+
+  
+    
+}
+- (void)layoutSubviews
+{
+
+    [super layoutSubviews];
+    
+    //scrollView的布局设置
+    self.scrollView.frame = CGRectMake(0, 0, self.frame.size.width, 200);
+    
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.delegate = self;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    //添加轮播图图片
+    //添加拍打shoushi
+   
+    
+    for (int i = 0; i < self.imageArray.count; i ++) {
+        
+        self.myImage = [[UIImageView alloc] init];
+        
+        
+        self.myImage.frame = CGRectMake(i * self.frame.size.width, 0, self.frame.size.width, 200);
+        
+        
+        _imageModel = self.imageArray[i];
+        
+        NSString *imageStr = _imageModel.image_url;
+        
+        [self.myImage sd_setImageWithURL:[NSURL URLWithString:imageStr]];
+        
+    
+        
+        [self.scrollView addSubview:self.myImage];
+        self.myImage.userInteractionEnabled = YES;
+        
+       
+      
+}
+    
+     #pragma 添加手势--保证最后添加
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(tapAction)];
+    [self addGestureRecognizer:tap];
+    
+    
+    self.scrollView.contentSize = CGSizeMake(self.frame.size.width * self.imageArray.count, self.scrollView.frame.size.height);
+    
+    
+    //PageControl的布局设置
+    self.myPage.currentPage = 0;
+    self.myPage.numberOfPages = self.imageArray.count;
+  
+    self.myPage.center = CGPointMake(self.frame.size.width * 0.5, self.scrollView.frame.size.height - 30);
+    
+    [self.myPage addTarget:self action:@selector(myPageClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+   
+}
+
+- (void)tapAction
+{
+
+    //根据 pagecontrol.currenPage,从数组中 获取网址就行了
+    NSMutableArray *arrayStr = [NSMutableArray array];
+    for (int i = 0; i < self.imageArray.count; i ++) {
+        
+        _imageModel = self.imageArray[i];
+        
+        
+         NSString *str = _imageModel.html_url;
+        
+        [arrayStr addObject:str];
+        
+ }
+   
+   
+    self.blockUrl(arrayStr[self.myPage.currentPage]);
+
+}
+
+
+
+- (void)binModel:(RecommendModel *)model
+{
+   
+    _imageModel = model;
+    
+    
+
+
+}
+//在page点击事件中,设置scrollView的偏移量
+- (void)myPageClick:(UIPageControl *)sender
+{
+    
+    //设置偏移量
+    [self.scrollView setContentOffset:CGPointMake(self.myPage.currentPage * self.frame.size.width, 0) animated:NO];
+
+}
+
+//滚动监听事件
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+    //求出当前的page点
+    double page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    //让其加上0.5,
+    self.myPage.currentPage = (int)(page + 0.5);
+ 
+}
+
+//添加计时器
+- (void)startTimer
+{
+
+    self.time = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(action) userInfo:nil repeats:YES];
+    
+    
+
+}
+
+- (void)action
+{
+    //当前页数加1,跳转到下一页面
+    NSInteger index = (self.myPage.currentPage + 1) % self.imageArray.count;
+    self.myPage.currentPage = index;
+    
+    [self myPageClick:self.myPage];
+}
+//开始移动的时候
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    NSInteger index = self.scrollView.contentSize.width / self.frame.size.width;
+    NSLog(@"---------++++++++++%ld",index);
+     NSLog(@"==========%ld",self.myPage.currentPage);
+    if (self.myPage.currentPage == (index - 1)) {
+        
+        
+        NSLog(@"==========%ld",self.myPage.currentPage);
+        self.myPage.currentPage = 0;
+        
+        
+    }
+
+    
+    //停止计时器
+    [self.time invalidate];
+
+}
+
+//移动结束时
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    
+    
+ 
+    //调用计时器的方法
+    [self startTimer];
+}
+
+
+@end

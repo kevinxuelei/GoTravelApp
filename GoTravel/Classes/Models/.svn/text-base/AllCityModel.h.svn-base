@@ -1,0 +1,32 @@
+//
+//  AllCityModel.h
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/15.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface AllCityModel : NSObject
+/*
+ "id": "55",
+ "catename": "曼谷",
+ "catename_en": "Bangkok",
+ "photo": "http://pic.qyer.com/album/1a0/93/2025520/index/339x226",
+ "lat": "13.741551",
+ "lng": "100.510368",
+ "ishot": true,
+ "beennumber": "95960",
+ "beenstr": "95960人去过",
+ "representative": "曼谷大皇
+ */
+
+@property (nonatomic, copy) NSString *cityID;
+@property (nonatomic, copy) NSString *catename;
+@property (nonatomic, copy) NSString *catename_en;
+@property (nonatomic, copy) NSString *photo;
+@property (nonatomic, copy) NSString *beenstr;
+@property (nonatomic, copy) NSString *representative;
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+@end

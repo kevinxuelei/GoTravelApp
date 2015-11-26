@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ha/!svn/ver/14/GoTravel/GoTravel/Classes/Models
+END
+RecommendModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ha/!svn/ver/9/GoTravel/GoTravel/Classes/Models/RecommendModel.h
+END
+PlayModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ha/!svn/ver/13/GoTravel/GoTravel/Classes/Models/PlayModel.m
+END
+DetailsDestinationViewCityModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/14/GoTravel/GoTravel/Classes/Models/DetailsDestinationViewCityModel.h
+END
+TravelNotesModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Models/TravelNotesModel.m
+END
+RecommendModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Models/RecommendModel.m
+END
+DestinationViewControllerModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Models/DestinationViewControllerModel.h
+END
+DetailsDestinationViewCityModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/14/GoTravel/GoTravel/Classes/Models/DetailsDestinationViewCityModel.m
+END
+AllCityModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ha/!svn/ver/14/GoTravel/GoTravel/Classes/Models/AllCityModel.h
+END
+DetailsDestinationViewModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ha/!svn/ver/3/GoTravel/GoTravel/Classes/Models/DetailsDestinationViewModel.h
+END
+DestinationViewControllerModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Models/DestinationViewControllerModel.m
+END
+PlayModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ha/!svn/ver/13/GoTravel/GoTravel/Classes/Models/PlayModel.h
+END
+TravelNotesModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Models/TravelNotesModel.h
+END
+AllCityModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ha/!svn/ver/14/GoTravel/GoTravel/Classes/Models/AllCityModel.m
+END
+DetailsDestinationViewModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ha/!svn/ver/3/GoTravel/GoTravel/Classes/Models/DetailsDestinationViewModel.m
+END

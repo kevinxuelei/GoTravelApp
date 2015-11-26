@@ -1,0 +1,88 @@
+//
+//  HostalNearbyTableViewController.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/13.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "HostalNearbyTableViewController.h"
+#import "NetWorkHandle.h"
+#import "AllNearbyTableViewCell.h"
+
+@interface HostalNearbyTableViewController ()
+@property(nonatomic,strong)NSMutableArray *dataArray;
+@end
+
+@implementation HostalNearbyTableViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    [self.tableView registerClass:[AllNearbyTableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    self.dataArray = [NSMutableArray array];
+    
+    [self loadValue];
+
+    
+    
+    
+   }
+
+-(void)loadValue
+{
+    
+    
+    [NetWorkHandle getDataWithURLString:@"http://api.breadtrip.com/place/pois/nearby/?category=10&start=0&count=20&latitude=40.030428999999984&longitude=116.34349600000002" compare:^(id object) {
+        NSDictionary *dic = object;
+        NSArray *array = dic[@"items"];
+        for (NSDictionary *dict1 in array) {
+            NearbyTableViewModel *model = [[NearbyTableViewModel alloc] initWithDictionary:dict1];
+            
+            [self.dataArray addObject:model];
+        }
+        
+        [self.tableView reloadData];
+        
+    }];
+    
+    
+    
+    
+    
+}
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return self.dataArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AllNearbyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    
+    [cell binModel:self.dataArray[indexPath.row]];
+    cell.backgroundColor = [UIColor colorWithRed:250/256 green:245/256 blue:230/256 alpha:0.001];
+    
+    return cell;
+
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    return 140;
+    
+    
+}@end

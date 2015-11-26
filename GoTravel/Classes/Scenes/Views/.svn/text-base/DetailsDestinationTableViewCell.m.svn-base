@@ -1,0 +1,70 @@
+
+//
+//  DetailsDestinationTableViewCell.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/12.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "DetailsDestinationTableViewCell.h"
+#import "UIImageView+WebCache.h"
+
+@interface DetailsDestinationTableViewCell ()
+//3区
+@property (nonatomic, strong) UIImageView *sceneryImageView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *priceoffLabel;
+@property (nonatomic, strong) UILabel *priceLabel;
+
+@end
+@implementation DetailsDestinationTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+//        三区
+        self.sceneryImageView = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.sceneryImageView];
+        
+        self.titleLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.titleLabel];
+        
+        self.priceoffLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.priceoffLabel];
+        
+        self.priceLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.priceLabel];
+    }
+    return self;
+}
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+//    三区
+    self.sceneryImageView.frame = CGRectMake(20, 20, 100, self.contentView.frame.size.height - 40);
+    self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.sceneryImageView.frame)+10, CGRectGetMinY(self.sceneryImageView.frame), self.contentView.frame.size.width - 150, 20);
+    self.titleLabel.numberOfLines = 0;
+    [self.titleLabel sizeToFit];
+    self.priceoffLabel.frame = CGRectMake(CGRectGetMaxX(self.sceneryImageView.frame)+10, CGRectGetMaxY(self.sceneryImageView.frame)-30, 70, 20);
+    self.priceLabel.frame = CGRectMake(CGRectGetMaxX(self.priceoffLabel.frame)+10, CGRectGetMaxY(self.sceneryImageView.frame)-30, self.contentView.frame.size.width - self.priceoffLabel.frame.size.width - self.sceneryImageView.frame.size.width - 30, 20);
+    
+}
+- (void)binModel:(DetailsDestinationViewCityModel *)model
+{
+    [self.sceneryImageView sd_setImageWithURL:[NSURL URLWithString:model.photo]];
+    self.titleLabel.text = model.title;
+    self.priceoffLabel.text = model.priceoff;
+    
+    NSArray *array = [model.price componentsSeparatedByString:@">"];
+    
+    NSMutableArray *array1 = [NSMutableArray array];
+    for (NSString *str in array) {
+       NSArray *array2 = [str componentsSeparatedByString:@"<"];
+        [array1 addObject:array2];
+    }
+    
+    self.priceLabel.text = [NSString stringWithFormat:@"%@%@", array1[1][0], array1[2][0]];
+}
+@end

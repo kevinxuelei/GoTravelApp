@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage
+END
+NSData+ImageContentType.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/NSData+ImageContentType.m
+END
+UIView+WebCacheOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIView+WebCacheOperation.m
+END
+SDWebImageDownloader.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDownloader.m
+END
+SDImageCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDImageCache.h
+END
+SDWebImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDecoder.h
+END
+SDImageCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDImageCache.m
+END
+SDWebImageDecoder.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDecoder.m
+END
+SDWebImageManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageManager.h
+END
+UIButton+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIButton+WebCache.h
+END
+SDWebImageManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageManager.m
+END
+SDWebImageDownloaderOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDownloaderOperation.h
+END
+UIImageView+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImageView+WebCache.h
+END
+UIImageView+HighlightedWebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImageView+HighlightedWebCache.h
+END
+SDWebImageCompat.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageCompat.h
+END
+UIButton+WebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIButton+WebCache.m
+END
+SDWebImageDownloaderOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDownloaderOperation.m
+END
+UIImageView+WebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImageView+WebCache.m
+END
+UIImageView+HighlightedWebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImageView+HighlightedWebCache.m
+END
+UIImage+MultiFormat.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImage+MultiFormat.h
+END
+SDWebImagePrefetcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImagePrefetcher.h
+END
+SDWebImageCompat.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageCompat.m
+END
+UIImage+GIF.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImage+GIF.h
+END
+UIImage+MultiFormat.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImage+MultiFormat.m
+END
+SDWebImagePrefetcher.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImagePrefetcher.m
+END
+NSData+ImageContentType.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/NSData+ImageContentType.h
+END
+SDWebImageDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageDownloader.h
+END
+UIImage+GIF.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIImage+GIF.m
+END
+UIView+WebCacheOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/UIView+WebCacheOperation.h
+END
+SDWebImageOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ha/!svn/ver/1/GoTravel/GoTravel/Classes/Vendors/SDWebImage/SDWebImageOperation.h
+END

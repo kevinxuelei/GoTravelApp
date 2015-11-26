@@ -1,0 +1,35 @@
+//
+//  TravelNotesModel.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/12.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "TravelNotesModel.h"
+
+@implementation TravelNotesModel
+
+
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    
+    if (self) {
+        [self setValuesForKeysWithDictionary:dictionary];
+        
+    }
+    
+    
+    return self;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+    
+    
+}
+
+@end

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationViewController">
+            <connections>
+                <outlet property="followHeadBtn" destination="9Pz-Ex-Uc5" id="b6J-tK-TtG"/>
+                <outlet property="followingBtn" destination="KIm-ye-3et" id="oen-19-i6P"/>
+                <outlet property="startBtn" destination="Tvl-9g-8xx" id="0kH-fa-KiB"/>
+                <outlet property="stopBtn" destination="7GO-uc-CuM" id="8Fi-C0-ECi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YE-U4-hOD">
+                    <rect key="frame" x="8" y="500" width="512" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvl-9g-8xx">
+                            <rect key="frame" x="0.0" y="6" width="60" height="33"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="定位" image="location.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="startLocation:" destination="-1" eventType="touchUpInside" id="em0-yg-8Aw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-Ex-Uc5">
+                            <rect key="frame" x="135" y="7" width="60" height="32"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="罗盘" image="compass.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.radius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="startFollowHeading:" destination="-1" eventType="touchUpInside" id="wXj-9X-aqU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIm-ye-3et">
+                            <rect key="frame" x="67" y="6" width="60" height="32"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="跟随" image="TraceMap.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="startFollowing:" destination="-1" eventType="touchUpInside" id="Gg0-zO-GPk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GO-uc-CuM">
+                            <rect key="frame" x="203" y="6" width="72" height="35"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="61q-WK-x0e"/>
+                                <constraint firstAttribute="width" constant="72" id="uy6-eu-GVu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="停止" image="stopMap.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="stopLocation:" destination="-1" eventType="touchUpInside" id="KmD-8K-YZB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="9Pz-Ex-Uc5" firstAttribute="leading" secondItem="Tvl-9g-8xx" secondAttribute="trailing" constant="75" id="1mw-Re-NPk"/>
+                        <constraint firstItem="9Pz-Ex-Uc5" firstAttribute="top" secondItem="0YE-U4-hOD" secondAttribute="top" constant="7" id="5kj-zX-ecd"/>
+                        <constraint firstItem="7GO-uc-CuM" firstAttribute="leading" secondItem="9Pz-Ex-Uc5" secondAttribute="trailing" constant="8" id="926-dc-S8u"/>
+                        <constraint firstAttribute="bottom" secondItem="KIm-ye-3et" secondAttribute="bottom" constant="2" id="9fC-iR-ZGT"/>
+                        <constraint firstItem="9Pz-Ex-Uc5" firstAttribute="leading" secondItem="Tvl-9g-8xx" secondAttribute="trailing" constant="75" id="CH0-xW-frg"/>
+                        <constraint firstItem="KIm-ye-3et" firstAttribute="top" secondItem="0YE-U4-hOD" secondAttribute="top" constant="6" id="EEe-of-PTf"/>
+                        <constraint firstAttribute="bottom" secondItem="Tvl-9g-8xx" secondAttribute="bottom" constant="1" id="EVe-bF-Wuk"/>
+                        <constraint firstAttribute="height" constant="40" id="N3C-LQ-6vC"/>
+                        <constraint firstItem="Tvl-9g-8xx" firstAttribute="leading" secondItem="0YE-U4-hOD" secondAttribute="leading" id="Psd-ca-GKe"/>
+                        <constraint firstItem="7GO-uc-CuM" firstAttribute="top" secondItem="0YE-U4-hOD" secondAttribute="top" constant="6" id="ho1-Ms-dy6"/>
+                        <constraint firstAttribute="bottom" secondItem="9Pz-Ex-Uc5" secondAttribute="bottom" constant="1" id="mJP-cX-V42"/>
+                        <constraint firstItem="Tvl-9g-8xx" firstAttribute="top" secondItem="0YE-U4-hOD" secondAttribute="top" constant="6" id="u1F-Hx-CqS"/>
+                        <constraint firstItem="KIm-ye-3et" firstAttribute="leading" secondItem="0YE-U4-hOD" secondAttribute="leading" constant="67" id="zgE-XG-2NV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0YE-U4-hOD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ATG-2K-77h"/>
+                <constraint firstAttribute="bottom" secondItem="0YE-U4-hOD" secondAttribute="bottom" constant="60" id="QtE-No-yXD"/>
+                <constraint firstAttribute="trailing" secondItem="0YE-U4-hOD" secondAttribute="trailing" constant="80" id="ej8-ba-T94"/>
+            </constraints>
+            <point key="canvasLocation" x="385" y="391"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="TraceMap.png" width="32" height="32"/>
+        <image name="compass.png" width="32" height="32"/>
+        <image name="location.png" width="32" height="32"/>
+        <image name="stopMap.png" width="32" height="32"/>
+    </resources>
+</document>

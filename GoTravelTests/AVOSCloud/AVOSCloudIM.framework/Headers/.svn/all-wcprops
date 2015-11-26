@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers
+END
+AVIMLocationMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMLocationMessage.h
+END
+AVIMClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMClient.h
+END
+AVIMFileMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMFileMessage.h
+END
+AVIMConversationUpdateBuilder.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMConversationUpdateBuilder.h
+END
+AVIMMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMMessage.h
+END
+AVIMImageMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMImageMessage.h
+END
+AVIMCommon.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMCommon.h
+END
+AVIMTextMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMTextMessage.h
+END
+AVIMUserOptions.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMUserOptions.h
+END
+AVIMTypedMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMTypedMessage.h
+END
+AVIMKeyedConversation.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMKeyedConversation.h
+END
+AVIMConversationQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMConversationQuery.h
+END
+AVIMSignature.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMSignature.h
+END
+AVIMAudioMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMAudioMessage.h
+END
+AVOSCloudIM.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVOSCloudIM.h
+END
+AVIMConversation.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMConversation.h
+END
+AVIMVideoMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloudIM.framework/Headers/AVIMVideoMessage.h
+END

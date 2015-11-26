@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders
+END
+AVHelpers.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVHelpers.h
+END
+AVJSONRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVJSONRequestOperation.h
+END
+AVLocationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVLocationManager.h
+END
+AVURLConnectionOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVURLConnectionOperation.h
+END
+AVNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVNetworking.h
+END
+AVFileHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVFileHTTPRequestOperation.h
+END
+AVHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVHTTPRequestOperation.h
+END
+AVAmazonS3Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVAmazonS3Client.h
+END
+AVXMLRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVXMLRequestOperation.h
+END
+AVImageRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVImageRequestOperation.h
+END
+AFNetworkingFix.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AFNetworkingFix.h
+END
+AVHTTPClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVHTTPClient.h
+END
+AVNetworkActivityIndicatorManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVNetworkActivityIndicatorManager.h
+END
+AVGlobal.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ha/!svn/ver/1/GoTravel/GoTravelTests/AVOSCloud/AVOSCloud.framework/PrivateHeaders/AVGlobal.h
+END

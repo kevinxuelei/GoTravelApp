@@ -1,0 +1,183 @@
+//
+//  DetailsdestinationCityViewController.m
+//  GoTravel
+//
+//  Created by lanou3g on 15/11/13.
+//  Copyright © 2015年 小辉╰つ. All rights reserved.
+//
+
+#import "DetailsdestinationCityViewController.h"
+#import "NetWorkHandle.h"
+#import "DetailsDestinationViewCityModel.h"
+
+#import "DetailsDestinationFristTableViewCell.h"
+#import "DetailsDestinationCityThirdCell.h"
+#import "DetailsDestinationTableViewCell.h"
+
+#import "MyWebController.h"
+
+
+@interface DetailsdestinationCityViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@end
+
+@implementation DetailsdestinationCityViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = self.titleStr;
+    self.dataArray = [NSMutableArray array];
+    [self loadTableView];
+    [self loadValue];
+    //    self.navigationItem
+}
+#pragma mark - 初始化tableView
+- (void)loadTableView
+{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
+    
+}
+#pragma mark - tableViewDelagate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    } else if (section == 1) {
+        return 1;
+    } else if (section == 2){
+        NSArray *array = self.dataArray[section];
+        return array.count;
+    }
+    return 0;
+    
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0) {
+        static NSString *cellStr = @"photoCell";
+        DetailsDestinationFristTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell = [[DetailsDestinationFristTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellStr];
+        }
+        cell.selectedBackgroundView = [[UIView alloc] init];
+        [cell sendArray:self.dataArray[indexPath.section]];
+        cell.block = ^(NSString *cityUrlStr) {
+            MyWebController *webVC = [[MyWebController alloc] init];
+            webVC.webStrUrl = cityUrlStr;
+            UINavigationController *webNA = [[UINavigationController alloc] initWithRootViewController:webVC];
+            [self presentViewController:webNA animated:YES completion:nil];
+        };
+        return cell;
+    } else if (indexPath.section == 1) {
+        static NSString *cellStr = @"TableViewCell";
+        DetailsDestinationCityThirdCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell = [[DetailsDestinationCityThirdCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellStr];
+        }
+        NSMutableArray *array = self.dataArray[indexPath.section];
+        [cell sendArray:array];
+        return cell;
+    } else if (indexPath.section == 2){
+        static NSString *cellStr = @"tableViewCell";
+        DetailsDestinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
+        if (!cell) {
+            cell = [[DetailsDestinationTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellStr];
+        }
+        NSArray *array = self.dataArray[indexPath.section];
+        [cell binModel:array[indexPath.row]];
+        return cell;
+    }
+    return 0;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.dataArray.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 300;
+    } else if (indexPath.section == 1) {
+        return 230;
+    } else if (indexPath.section == 2) {
+        return 150;
+    }
+    return 0;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
+    view.backgroundColor = [UIColor cyanColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 30)];
+    if (section == 1) {
+        label.text = @"精彩当地游";
+    } else if (section == 2) {
+        label.text = @"超值自由行";
+    }
+    [view addSubview:label];
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section != 0) {
+        return 30;
+    }
+    return 0;
+}
+#pragma mark - 解析数据
+- (void)loadValue
+{
+    NSMutableArray *photosArray = [NSMutableArray array];
+    NSMutableArray *collectionArray = [NSMutableArray array];
+    NSMutableArray *discountArray = [NSMutableArray array];
+    __weak DetailsdestinationCityViewController *detailVC = self;
+    
+    [NetWorkHandle getDataWithURLString:[NSString stringWithFormat:@"http://open.qyer.com/qyer/footprint/city_detail?client_id=qyer_android&client_secret=9fcaae8aefc4f9ac4915&v=1&track_user_id=7004851&track_deviceid=863092021867505&track_app_version=6.8.2&track_app_channel=xiaomi&track_device_info=armani&track_os=Android4.4.4&app_installtime=1447126585362&lat=40.030375&lon=116.343078&city_id=%@&oauth_token=3e8ea67823d5b924b36845d74047d49b", self.cityID] compare:^(id object) {
+        NSDictionary *dic = object;
+        NSDictionary *dict = dic[@"data"];
+        
+        DetailsDestinationViewCityModel *fristModel = [[DetailsDestinationViewCityModel alloc] initWithDictionary:dict];
+        [photosArray addObject:fristModel];
+        
+        NSArray *discountarray = dict[@"local_discount"];
+        for (NSDictionary *dic1 in discountarray) {
+            DetailsDestinationViewCityModel *model = [[DetailsDestinationViewCityModel alloc] initWithDictionary:dic1];
+            [collectionArray addObject:model];
+        }
+        NSArray *discountarray1 = dict[@"new_discount"];
+        for (NSDictionary *dic2 in discountarray1) {
+            DetailsDestinationViewCityModel *model = [[DetailsDestinationViewCityModel alloc] initWithDictionary:dic2];
+            [discountArray addObject:model];
+        }
+        
+        [self.dataArray addObject:photosArray];
+        [self.dataArray addObject:collectionArray];
+        [self.dataArray addObject:discountArray];
+        [detailVC.tableView reloadData];
+    }];
+    
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+@end
